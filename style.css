@@ -1,0 +1,520 @@
+*{
+    margin: 0 ;
+    padding : 0;
+}
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+      
+}
+
+/* Hero section */
+
+#hero{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#hero::before{
+    content: "";
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding: 55px 0 55px 0;
+    background-image: url(imges/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: brightness(50%);
+}
+#hero_content{
+    position: relative;
+    
+}
+#hero_content h1{
+    color: white;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 2px black;
+}
+#hero_content h2{
+    color: white;
+    font-size: 2.8rem;
+    font-family: cursive;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    text-shadow: 2px 2px 2px black;
+}
+#hero_content a{
+    color: white;
+    font-size: 1.5rem;
+    padding: 3px 20px 3px 20px;
+    border: 1px solid orange;
+    background: rgb(red, green, blue);
+    text-decoration: none;
+    border-radius: 25px;
+}
+#hero_content a:hover{
+    background: blue;
+}
+
+/* header section */
+#header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 70px;
+    line-height: 70px;
+    
+}
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    background: rgb(0, 0, 0,0.5);
+}
+#navbar h1{
+    color: orange;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 2px black;
+    font-family: cursive;
+   
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+    padding: 3px 15px 3px 15px;
+}
+#navbar ul li:hover,#phone a:hover, #Mobile_Menu ul li:hover{
+    background: navy;
+    cursor: pointer;
+}
+#navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+#phone a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 3px 15px 3px 15px;
+    border: 1px solid orange;
+    
+}
+#Mobile_Menu{
+    display: none;
+    height: 40px;
+    line-height: 40px;
+    background-color: magenta;
+}
+#Mobile_Menu ul{
+    display: flex;
+    justify-content: center;
+}
+#Mobile_Menu ul li{
+    list-style: none;
+    padding: 0 5px 0 5px;
+}
+#Mobile_Menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* menu section */
+
+#menu{
+    padding: 55px 0 55px 0;
+    background-image: url(imges/BACKG.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+#section{
+    color: white;
+    padding: 25px 0 25px 0;
+    text-align: center;
+    font-size: 2rem;
+    font-family: Verdana;
+}
+#menu_row{
+    display: flex;
+    padding: 0 100px 0 100px;
+}
+#menu_column{
+    box-shadow: 2px 2px 2px gray;
+    border: 1px solid grey;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    flex: 1;
+}
+#menu_column h2{
+    background-color: brown;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-family: cursive;
+}
+#image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid orange;
+}
+#image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+}
+/* About Section */
+
+
+#About {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding: 55px 0 55px 0;
+    background-image: url(imges/BACKG.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    
+}
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    z-index: 1000; 
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+
+
+
+#About h2 {
+    font-size: 2.5rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#About p {
+    font-size: 1.2rem;
+    color: black;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    padding: 0 15px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+
+
+
+ 
+/* book a table */
+body{
+    background-image: url(imges/BACKG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#booking {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    width: 100vw; 
+    margin: 0; 
+    padding: 0; 
+}
+h3{
+    text-decoration-line: underline;
+}
+
+.container {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 50%; 
+    max-height: 80vh; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff; 
+    padding: 30px; 
+    border-radius: 8px; 
+    text-align: center; 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); 
+    font-size: 1.2rem; 
+    overflow-y: auto; 
+}
+
+
+
+button {
+    padding: 10px ;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: black;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+
+/* reviews*/
+main {
+    padding: 20px; /* Padding for main content */
+}
+
+#reviews {
+    background-image: url(imges/BACKG.png);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    box-sizing: border-box; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    margin-bottom: 20px; 
+    overflow-y: hidden;
+    
+}
+#reviews h2 {
+    margin-top: 60px; 
+    margin-bottom: 20px; 
+    text-align: center; /* Center the heading text */
+    color: white;
+    
+}
+
+
+
+/* Add Review Form Styles */
+
+#add-review {
+    background-color: rgba(0, 0, 0, 0.7); /*transparent background */
+    border-radius: 8px; 
+    padding: 15px;
+    max-width: 600px; 
+    margin: 0 auto; /* Center the form container */
+}
+
+label {
+    display: block; 
+    margin-bottom: 5px; 
+    color: white; /* color of the name, rating, your review in the review form*/
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 85%; /* Full width for inputs */
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; /* Rounded corners for inputs */
+}
+
+button {
+    background-color: #2980b9; 
+    color: white; 
+    border: none; 
+    padding:  15px; 
+    border-radius: 2px; 
+    cursor: pointer; 
+    font-size: 1rem; 
+}
+
+button:hover {
+    background-color: #1a6a8a; 
+}
+
+
+
+/* Contact Info Section */
+#contact {
+    background-image: url(imges/BACKG.png);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+#contact-info {
+    text-align: center;
+    background: rgba(75, 73, 73, 0.7); /* transparent background */
+    padding: 50px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+#contact-info ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+/*  contact details */
+#contact-info ul li strong {
+    color: black; /*  color for labels (Phone, Email, Address) */
+}
+
+#contact-info ul li {
+    color:white; /*  color for the actual contact details */
+}
+
+
+#contact-info ul li a {
+    color:white; /*color for the email link */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+#contact-info ul li a:hover {
+    text-decoration: underline; 
+}
+
+
+
+
+
+/* Contact Form Section */
+#contact-form-section {
+    background: rgba(0, 0, 0, 0.7); /* transparent background */
+    padding: 15px;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: white;
+    text-decoration-line: underline; /* contact heading with underline */
+}
+p {
+    color: #fff;   
+}
+#contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#contact-form input, #contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+#contact-form button {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#contact-form button:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:768px){
+    #Mobile_Menu{
+        display: block;
+    }
+    #navbar ul{
+        display: none;
+    }
+    html{
+        font-size: 95%;
+    }
+    #menu_row{
+        flex-wrap: wrap;
+        padding: 0 10px 0 10px;
+    }
+}
+@media screen and (max-width:360px){
+    html{
+        font-size: 70%;
+    }
+}
