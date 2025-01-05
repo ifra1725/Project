@@ -6,12 +6,38 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <title>Contact Us</title>
+    
+    <style>
+        #confirmation-message {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+        #return-home-btn {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <!-- header section begin -->
     <div id="header">
         <nav id="navbar">
-            <h1>HEHE Restaurant</h1>
+            <a href="index.html">
+                <button type="button" >
+                    <h1>Restaurant</h1>
+                </button>
+            </a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
@@ -35,6 +61,8 @@
             </ul>
         </div>
     </div>
+                     <!-- header section ends -->
+
 
     <main id="contact">
         <!-- Contact Information Section -->
@@ -51,7 +79,7 @@
         <!-- Contact Form Section -->
         <section id="contact-form-section">
             <h2>Send Us a Message</h2><br>
-            <form id="contact-form">
+            <form id="contact-form" onsubmit="submitForm(event)">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -67,6 +95,25 @@
                 <button type="submit">Submit</button>
             </form>
         </section>
+
+    
+        <div id="confirmation-message">
+            Your message has been delivered to us. We will contact you as soon as possible after receiving your message.
+        </div>
+
+        <button id="return-home-btn" onclick="window.location.href='index.html';">Return to Home</button>
     </main>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();  
+
+            document.getElementById('contact-form-section').style.display = 'none';
+
+            document.getElementById('confirmation-message').style.display = 'block';
+
+            document.getElementById('return-home-btn').style.display = 'inline-block';
+        }
+    </script>
 </body>
 </html>
