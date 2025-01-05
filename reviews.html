@@ -5,72 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Reviews Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #review-form {
+            margin-bottom: 20px;
+        }
+        #reviews {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+        .review {
+            margin-bottom: 10px;
+            color: white; 
+        }
+        .review strong {
+            color: orange; 
+            font-weight: bold;
+        }
+        .delete-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
-    <!-- header section begin -->
- <div id="header">
-    <nav id="navbar">
-        <h1>HEHE Restaurant</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
+    <!-- Header Section -->
+    <div id="header">
+        <nav id="navbar">
+            <a href="index.html">
+                <button type="button">
+                    <h1>Restaurant</h1>
+                </button>
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="booking.html">Book a Table</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
                 <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div id="Phone">
-            <a href="+923478990987">+923478990987</a>
-        </div>
-    </nav>
-    <div id="Mobile_Menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="booking.html">Book a Table</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+            </ul>
+            <div id="Phone">
+                <a href="tel:+923478990987">+923478990987</a>
+            </div>
+        </nav>
     </div>
 
- </div>
- <main id="reviews">
-    <section id="reviews">
-        <h2>Customer Reviews</h2>
-        <div id="review-list">
-            <!-- Reviews will appear here -->
-        </div>
-    </section>
+    <!-- Review Section -->
+    <main id="reviews">
+        <section>
+            <h2>Customer Reviews</h2>
+            <div id="review-list">
+            </div>
+        </section>
 
-    <!-- Add Review Form -->
-    <section id="add-review">
-        <h2>Share Your Experience</h2>
-        <form id="review-form">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+        <!-- Add Review Form -->
+        <form id="review-form" onsubmit="addReview(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br><br>
 
             <label for="rating">Rating (1-5):</label>
-            <select id="rating" name="rating" required>
-                <option value="">Select a Rating</option>
+            <select id="rating" required>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-            </select><br>
+            </select><br><br>
 
-            <label for="review">Your Review:</label>
-            <textarea id="review" name="review" rows="4" required></textarea>
+            <label for="review">Review:</label>
+            <textarea id="review" rows="4" required></textarea><br><br>
 
             <button type="submit">Submit Review</button>
         </form>
-    </section>
-</main>
 
+        <div id="reviews">
+            <h2>All Reviews</h2>
+        </div>
+    </main>
 
+    <script>
+        function addReview(event) {
+            event.preventDefault();
 
+            const name = document.getElementById("name").value;
+            const rating = document.getElementById("rating").value;
+            const reviewText = document.getElementById("review").value;
 
+            const review = document.createElement("div");
+            review.className = "review";
+            review.innerHTML = `
+                <strong>${name}</strong> - Rating: ${rating}/5
+                <p>${reviewText}</p>
+                <button class="delete-btn" onclick="deleteReview(this)">Delete</button>
+            `;
 
+            const reviewsDiv = document.getElementById("reviews");
+            reviewsDiv.appendChild(review);
+
+            document.getElementById("review-form").reset();
+        }
+
+        function deleteReview(button) {
+            const reviewDiv = button.parentElement;
+            reviewDiv.remove();
+        }
+    </script>
 </body>
 </html>
