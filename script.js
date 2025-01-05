@@ -6,4 +6,4 @@ document.getElementById('booking-button').addEventListener('click', function() {
 
 
 
-//javscript is mostly used in html files
+//javscript is mostly used in html files(inside the html code)
